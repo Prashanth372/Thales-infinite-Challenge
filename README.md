@@ -1,7 +1,7 @@
 # Thales-infinite-Challenge
 ## Assumption is we are using public cloud kubernetes cluster (EKS)
 
-## Below is the solution for the Task 1 ##
+## Solution for the Task 1 ##
 
 
 `-` Creation of deployment, by running the below command it will create 2 pods(replica set) of php application.
