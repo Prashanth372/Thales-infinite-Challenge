@@ -8,7 +8,7 @@
 
 `-` It also create Node port service.
 
-`-` kubectl apply -f php-deployment.yml
+ kubectl apply -f php-deployment.yml
 
 `-` Once this is created next step is to create HPA (Horizontal Pod Autoscaler).
 
@@ -19,16 +19,20 @@
 kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
 
 `-` Once the metric serve is in place to create the load please execute the below command which will increase the load - once HPA verification is completed kill it by using ctrl+c.
+
 kubectl run -i --tty load-generator --rm --image=busybox:1.28 --restart=Never -- /bin/sh -c "while sleep 0.01; do wget -q -O- http://php-apache; done"
 
 `-` Next to this we will create PDB and service account.
 
 `-` Once PDB is created it will allow max one pod to be unavailable as per our instructions.
 
-`-` Log in to pod to check if the API token is visible as environment variable or not by 
+`-` Log in to pod to check if the API token is visible as environment variable or not by executing 
+
 kubectl exec --stdin --tty <php-apache-5df567968c-4z4cl> -- /bin/bash 
-  echo $API_TOKEN
-apt install curl 
+
+  To verify value of secret   echo $API_TOKEN
+  
+apt install curl (to verify nodeport)
   
 `-` now verify your nodeport service by executing curl command.
   
