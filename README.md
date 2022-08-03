@@ -3,7 +3,7 @@
 
 Below is the solution for the task1.
 
-**kubectl apply -f php-deployment.yml
+kubectl apply -f php-deployment.yml
 kubectl get all
 kubectl apply -f hpa.yml
 kubectl get all
@@ -13,7 +13,7 @@ kubectl get sa
 kubectl get secrets
 kubectl apply -f secret-password.yml
 kubectl get pods
-kubectl exec --stdin --tty php-apache-5df567968c-4z4cl -- /bin/bash**
+kubectl exec --stdin --tty php-apache-5df567968c-4z4cl -- /bin/bash
 
 Creation of deployment, by running the below command it will create 2 pods(replica set) of php application.
 It also create Node port service.
