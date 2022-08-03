@@ -1,19 +1,9 @@
 # Thales-infinite-Challenge
 ## Assumption is we are using public cloud kubernetes cluster (EKS)
 
-###### Below is the solution for the Task1 ######
+## Below is the solution for the Task1 ##
 
-* kubectl apply -f php-deployment.yml
-* kubectl get all
-* kubectl apply -f hpa3.yml
-* kubectl get all
-* kubectl apply -f pdb.yml
-* kubectl apply -f sa.yaml
-* kubectl get sa
-* kubectl get secrets
-* kubectl apply -f secret-password1.yml
-* kubectl get pods
-* kubectl exec --stdin --tty php-apache-5df567968c-4z4cl -- /bin/bash
+
 
 Creation of deployment, by running the below command it will create 2 pods(replica set) of php application.
 It also create Node port service.
@@ -37,4 +27,16 @@ apt install curl
   now verify your nodeport service by executing curl command.
   curl nodeip:port (port from kubectl get pods -o wide )
   eg: curl 10.57.**.211:32048
-
+## Please find the useful commands used 
+  
+* kubectl apply -f php-deployment.yml
+* kubectl get all
+* kubectl apply -f hpa3.yml
+* kubectl get all
+* kubectl apply -f pdb.yml
+* kubectl apply -f sa.yaml
+* kubectl get sa
+* kubectl get secrets
+* kubectl apply -f secret-password1.yml
+* kubectl get pods
+* kubectl exec --stdin --tty php-apache-5df567968c-4z4cl -- /bin/bash
