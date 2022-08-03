@@ -1,7 +1,7 @@
 # Thales-infinite-Challenge
 ## Assumption is we are using public cloud kubernetes cluster (EKS)
 
-## Below is the solution for the Task1 ##
+## Below is the solution for the Task 1 ##
 
 
 `-` Creation of deployment, by running the below command it will create 2 pods(replica set) of php application.
@@ -14,7 +14,7 @@
 
 `-` In order to verify the load, verify if the metric server is available or not .
 
-`-` if not available pelase install by using the below command.
+`-` if not available please install by using the below command.
 
 < to fill cmd>
 
