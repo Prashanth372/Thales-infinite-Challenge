@@ -10,7 +10,7 @@
 
 `-` kubectl apply -f php-deployment.yml
 
-`-` Once this is created next step is to create HPA (horizontal pod autoscaler).
+`-` Once this is created next step is to create HPA (Horizontal Pod Autoscaler).
 
 `-` In order to verify the load, verify if the metric server is available or not .
 
