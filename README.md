@@ -3,7 +3,7 @@
 
 Below is the solution for the task1.
 
-`kubectl apply -f php-deployment.yml`
+"kubectl apply -f php-deployment.yml"
 `kubectl get all`
 `kubectl apply -f hpa3.yml`
 `kubectl get all`
