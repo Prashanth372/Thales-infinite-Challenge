@@ -20,7 +20,12 @@ It also create Node port service.
 kubectl apply -f php-deployment.yml
 
 Once this is created next step is to create HPA (horizontal pod autoscaler).
+In order to verify the load, verify if the metric server is available or not .
+if not available pelase install by using the below commnand.
+< to fill cmd>
+Once the metric serve is in place to create the load please execute the below command which will increase the load - once HPA verification is completed kill it by using ctrl+c.
 
+< to fill cmd>
 Next to this we will create PDB and service account.
 
 Once PDB is created it will allow max one pod to be unavailable as per our instructions.
