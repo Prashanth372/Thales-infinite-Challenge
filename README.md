@@ -16,10 +16,10 @@
 
 `-` if not available please install by using the below command.
 
-< to fill cmd>
+kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
 
 `-` Once the metric serve is in place to create the load please execute the below command which will increase the load - once HPA verification is completed kill it by using ctrl+c.
-< to fill cmd>
+kubectl run -i --tty load-generator --rm --image=busybox:1.28 --restart=Never -- /bin/sh -c "while sleep 0.01; do wget -q -O- http://php-apache; done"
 
 `-` Next to this we will create PDB and service account.
 
