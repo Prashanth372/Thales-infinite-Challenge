@@ -1,0 +1,59 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+  name: php-apache
+
+spec:
+  selector:
+    matchLabels:
+      run: php-apache
+
+  replicas: 2
+
+  template:
+    metadata:
+      labels:
+        run: php-apache
+
+    spec:
+      containers:
+        - name: php-apache
+
+          image: k8s.gcr.io/hpa-example
+
+          ports:
+            - containerPort: 80
+
+          env:
+            - name: API_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: database-credentials
+                  key: API_TOKEN
+
+          resources:
+            limits:
+              cpu: 500m
+
+            requests:
+              cpu: 200m
+
+---
+apiVersion: v1
+
+kind: Service
+
+metadata:
+  name: php-apache
+
+  labels:
+    run: php-apache
+
+spec:
+  ports:
+    - port: 80
+  type: NodePort
+  selector:
+    run: php-apache

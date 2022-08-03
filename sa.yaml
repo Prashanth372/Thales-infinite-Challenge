@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  creationTimestamp: "2022-05-13T14:58:53Z"
+  name: default
+  namespace: default
+  uid: 92c54c05-fdb0-40a5-b735-1b035a2a1815
+secrets:
+- name: default-token-kgvqb
+imagePullSecrets:
+- name: myregistrykey
